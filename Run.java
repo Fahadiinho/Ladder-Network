@@ -90,7 +90,7 @@ public class Run {
 						}
 						Req.setText(Double.toString(R[1] + R[0]));
 					}
-					else if(num%2 == 0) { //ODD, Note: There's a problem in here
+					else if(num%2 == 0) { //ODD
 						for(int i = num; i > 0; i-=2) {
 							R[i-1] = (R[i] * R[i-1])/(R[i] + R[i-1]);
 							Rs = R[i-1] + R[i-2];
@@ -104,8 +104,8 @@ public class Run {
 					//------- Calculating each element's I -------//
 					I[0] = It;
 					if(num == 0 || num == 1) Ieach.setText(Double.toString(It));
-					else if(num%2 == 1) { //EVEN, Note: There's a problem in here
-						for(int k = 1; k < num; k+=2) { //Note: You played with R
+					else if(num%2 == 1) { //EVEN
+						for(int k = 1; k < num; k+=2) { 
 							for(int i = num; i > 1; i-=2) {
 								Rsi = Ri[i] + Ri[i-1];
 								if(i-2 == k) break;
